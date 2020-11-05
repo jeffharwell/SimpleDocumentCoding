@@ -123,7 +123,7 @@ $create_table = "create table codingresponse (
                     coder VARCHAR(50) NOT NULL,
                     document VARCHAR(200) NOT NULL,
                     response TEXT NOT NULL,
-                    UNIQUE(coder, document))
+                    UNIQUE(coder, document)) ENGINE=InnoDB ROW_FORMAT=DYNAMIC
                 ";
 $conn->exec($create_table);
 
@@ -143,7 +143,7 @@ $conn->exec($create_coder_table);
 // Create the irrelevant document table 
 $create_coder_table = "create table irrelevantdocuments (
                            document VARCHAR(200) PRIMARY KEY
-                       )";
+                       ) ENGINE=InnoDB ROW_FORMAT=DYNAMIC";
 $conn->exec($create_coder_table);
 
 
