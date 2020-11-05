@@ -34,7 +34,7 @@ $password = $argv[2];
 $database = $argv[3];
 $database_host = $argv[4];
 // This works for Linux/Unix, if you are on windows you will need to implement your own path creation logic
-$credentials_file = add_separator($argv[5])."simpledocumentcoding_configuration.php";
+$credentials_file = add_separator($argv[5])."simpledocumentcoding_configuration".uniqid().".php";
 $corpus_directory = add_separator($argv[6]);
 
 ## Does the config file exist, if so exit with an error
