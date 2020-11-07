@@ -173,6 +173,20 @@ echo("  You can modify this later by editing $credentials_file.\n\n");
 $line = readline("URL for Coding Standard: ");
 $coding_standard_url = trim($line);
 
+echo("\n\n* Enter the question coders should consider when evaluating the corpus.\n");
+echo("  You can modify this later by editing $credentials_file.\n\n");
+$line = readline("Coding Question: ");
+$coding_question = str_replace("'", "\\'", trim($line));
+
+echo("\n\n* Enter the affirmative message that coders will chose if the document agrees with the question.\n");
+echo("  You can modify this later by editing $credentials_file.\n\n");
+$line = readline("Affirmative Message: ");
+$affirmative_message = str_replace("'", "\\'", trim($line));
+
+echo("\n\n* Enter the dissenting message that coders will chose if the document disagrees with the question.\n");
+echo("  You can modify this later by editing $credentials_file.\n\n");
+$line = readline("Dissenting Message: ");
+$dissenting_message = str_replace("'", "\\'", trim($line));
 
 $credentials_file_content = "<?php
 \$username = '$username';
@@ -182,6 +196,9 @@ $credentials_file_content = "<?php
 \$corpus_directory = '$corpus_directory';
 \$query_keywords = $query_keyword_array;
 \$coding_standard_url = '$coding_standard_url';
+\$coding_question = '$coding_question';
+\$affirmative_message = '$affirmative_message';
+\$dissenting_message = '$dissenting_message';
 ?>
 ";
 echo("\n\n* Creating $credentials_file.\n");

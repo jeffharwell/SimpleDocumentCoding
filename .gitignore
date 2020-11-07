@@ -1,5 +1,5 @@
 config.php
-simpledocumentcoding_configuration.php
+simpledocumentcoding_configuration*.php
 ./political
 ./asthma
 my_setup.sh
