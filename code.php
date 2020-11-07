@@ -84,7 +84,7 @@ $(document).ready(function() {
             <p><?php echo("Coder: ".$coderid)?></p>
             <p><?php echo("Document: ".$doc_to_code)?></p>
             <p class="h2">How does the document below answer the following question:
-            Did Comey's actions cause Clinton to lose the election?</p>
+<?php echo($coding_question) ?></p>
             <p><i>Highlighting Keywords: <?php echo($keyword_list) ?></i></p>
         </div> <!-- end title section -->
     </div>
@@ -104,13 +104,13 @@ $(document).ready(function() {
                 <div class="form-group form-check">
                     <input class="form-check-input" type="radio" name="coding-viewpoint" id="viewpoint1" value="yes" required>
                     <label class="form-check-label" for="viewpoint1">
-                      Yes - Comey's action did or will lead to Clinton losing the election
+			<?php echo($affirmative_message) ?>
                     </label>
                  </div>
                 <div class="form-group form-check">
                     <input class="form-check-input" type="radio" name="coding-viewpoint" id="viewpoint2" value="no">
                     <label class="form-check-label" for="viewpoint2">
-                      No - Comey's action did not or will not lead to Clinton losing the election
+		      <?php echo($dissenting_message) ?>
                     </label>
                 </div>
                 <div class="form-group">
