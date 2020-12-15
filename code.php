@@ -114,13 +114,38 @@ $(document).ready(function() {
                     </label>
                 </div>
                 <div class="form-group">
-                    <label for="formControlRange">How Strongly does the document express this viewpoint: <b>1</b> - not strongly to <b>7</b> - very strongly.</label>
+                    <label for="formControlRange">How strongly do you feel that the document express this viewpoint from <b>1</b> - not strongly, to <b>7</b> - very strongly?</label>
+                    <div class="btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="coding-range" id="coding-range1" value="1" required>1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="coding-range" id="coding-range2" value="2" required>2
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="coding-range" id="coding-range3" value="3" required>3
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="coding-range" id="coding-range4" value="4" required>4
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="coding-range" id="coding-range5" value="5" required>5
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="coding-range" id="coding-range6" value="6" required>6
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="coding-range" id="coding-range7" value="7" required>7
+                        </label>
+                    </div>
+                    <!--
                     <div class="d-flex justify-content-center my-4">
                         <div class="w-50">
                             <input type="range" name="coding-range" class="form-control-range" id="formControlRange" min="1" max="7" value="3">
                         </div>
                         <span class="font-weight-bold text-primary ml-2 valueSpan2"></span>
-                </div>
+                    </div>
+                    -->
                 <div class="form-group">
                     <label for="note">Notes</label>
                     <textarea class="form-control" name="coding-note" id="note" rows="4"></textarea>

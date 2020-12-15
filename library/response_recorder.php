@@ -32,6 +32,7 @@ function save_document_coding($conn, $coderid) {
                 $result["coding"][$key] = $value;
                 //echo("<li>$key - ".$value."</li>\n");
             }
+            //echo("<li>$key - ".$value."</li>\n");
         }
         //echo("</ul>\n");
         $coding_data = json_encode($result);
