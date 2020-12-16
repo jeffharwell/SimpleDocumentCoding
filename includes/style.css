@@ -9,3 +9,8 @@ pre.warc {
 div.title {
     background-color: #b2b2b2;
 }
+
+.btn-secondary:not(:disabled):not(.disabled).active {
+    background-color: #ff0000;
+    border-color: #964040;
+}
