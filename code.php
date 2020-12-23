@@ -63,9 +63,13 @@ $(document).ready(function() {
   // the content using the <mark> tag
   for (let i in keywords) {
       if (keywords[i] != "") {
-          //console.log("replacing");
-          let re = new RegExp("\\s("+keywords[i]+"[A-Za-z']*)\\s", 'ig');
-          content = content.replace(re, " <mark>$1</mark> ");
+          console.log("replacing term "+keywords[i]+" in document.");
+          // Sometimes the document does not have a space between the matched
+          // word and the next word, so account for this in the match. Additionally 
+          // account for a closing parenthesis quotes, period, question mark 
+          // and exclamation point.
+          let re = new RegExp("\\s("+keywords[i]+")([A-Za-z'),.?!\"]*)\\s", 'ig');
+          content = content.replace(re, " <mark>$1</mark>$2 ");
       }
   }
 
