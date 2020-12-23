@@ -117,8 +117,15 @@ $(document).ready(function() {
 		      <?php echo($dissenting_message) ?>
                     </label>
                 </div>
+                <div class="form-group form-check">
+                    <input class="form-check-input" type="radio" name="coding-viewpoint" id="viewpoint3" value="irrelevant">
+                    <label class="form-check-label" for="viewpoint3">
+                        Document is Irrelevant to the Question
+                    </label>
+                </div>
+
                 <div class="form-group">
-                    <label for="formControlRange">How strongly do you feel that the document express this viewpoint from <b>1</b> - not strongly, to <b>7</b> - very strongly?</label>
+                    <label for="formControlRange">How strongly do you feel that the document express this viewpoint, or how sure are you that the document is irrelevant, from <b>1</b> - not strongly, to <b>7</b> - very strongly?</label>
                     <div class="btn-group-toggle" data-toggle="buttons">
                         <label class="btn btn-secondary">
                             <input type="radio" name="coding-range" id="coding-range1" value="1" required>1
